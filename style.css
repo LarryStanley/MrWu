@@ -22,14 +22,14 @@ html,body {
     -o-background-size: cover;
     background-size: cover;
 
-    font-size: 36px;
+    font-size: 5vh;
     font-family: KongXi, HelveticaNeue, Helvetica, Arial, "微軟正黑體", "微软雅黑", "メイリオ", "맑은 고딕", sans-serif;
     padding-top: 5%;
     padding-left: 10%;
 }
 
 #secondPage {
-    font-size: 24px;
+    font-size: 3vmin;
     height: 200px;
     color: white;
     background-color: #34495e;
@@ -45,12 +45,12 @@ html,body {
     padding-top: 5%;
     padding-left: 10%;
     height: calc(100% - 200px);
-    font-size: 36px;
+    font-size: 4vh;
     font-family: "Helvetica Neue", Helvetica, Arial, "微軟正黑體", "微软雅黑", "メイリオ", "맑은 고딕", sans-serif;
 }
 
 .btn {
-    font-size: 36px;
+    font-size: 4vh;
     color: #FC6C61;
 }
 
