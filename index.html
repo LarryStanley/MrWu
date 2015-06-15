@@ -38,13 +38,13 @@
 <script>
 
     var showDetail = false;
-    
+
     $(window).scroll(function(){
         if ($("#secondPage").visible() && !showDetail) {
             showDetail = true;
             $('#height').animateNumber({ number: 183 });
             $('#weight').animateNumber({ number: 95 });
-            $('#age').animateNumber({ number: 22 });
+            $('#age').animateNumber({ number: 21 });
             thirdPageAnimate(0);
         }
     });
