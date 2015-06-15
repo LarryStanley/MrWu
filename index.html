@@ -12,7 +12,7 @@
     <script src="jquery.visible.min.js"></script>
     <script src="jquery.animateNumber.min.js"></script>
 </head>
-<body>
+<body onload="firstPageAnimate(0)">
     <div id="firstPage"></div>
     <div id="secondPage">
         <div class="container">
@@ -38,11 +38,7 @@
 <script>
 
     var showDetail = false;
-
-    $("#firstPage").ready(function(){
-        firstPageAnimate(0);
-    });
-
+    
     $(window).scroll(function(){
         if ($("#secondPage").visible() && !showDetail) {
             showDetail = true;
