@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>考古學家 - 吳俊良</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animate.css">
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="jquery.visible.min.js"></script>
+    <script src="jquery.animateNumber.min.js"></script>
+</head>
+<body>
+    <div id="firstPage"></div>
+    <div id="secondPage">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    體重<br>
+                    <span id="weight" style="font-size: 100px; color: #E74E3D;">0</span>公斤
+                </div>
+                <div class="col-md-4">
+                    身高<br>
+                    <span id="height" style="font-size: 100px; color: #E74E3D;">0</span>公分
+                </div>
+                <div class="col-md-4">
+                    年齡<br>
+                    <span id="age" style="font-size: 100px; color: #E74E3D;">0</span>歲
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="thirdPage">
+    </div>
+</body>
+<script>
+
+    var showDetail = false;
+
+    $("#firstPage").ready(function(){
+        firstPageAnimate(0);
+    });
+
+    $(window).scroll(function(){
+        if ($("#secondPage").visible() && !showDetail) {
+            showDetail = true;
+            $('#height').animateNumber({ number: 183 });
+            $('#weight').animateNumber({ number: 95 });
+            $('#age').animateNumber({ number: 22 });
+            thirdPageAnimate(0);
+        }
+    });
+
+    function firstPageAnimate(index) {
+        var data = ["你說", "未來，不需要想", "只要相信自己", "過去， 不必緬懷", "只要打開FB"];
+        setTimeout(function(){
+            $("#firstPage").append("<div class='animated fadeInUp'>" + data[index] +"</div>");
+            index++;
+            if (index < data.length)
+                firstPageAnimate(index);
+            else
+                loadName();
+        }, 1000);
+    }
+
+    function loadName() {
+        setTimeout(function(){
+            $('#firstPage').append("<div class='animated fadeInUp' style='color: #d35400; position:absolute; left:10%; bottom: 10%;'>考古學者<br><span style='font-size: 72px;'>吳俊良</span></div>");
+        }, 1000);
+    }
+
+    function showButton() {
+        setTimeout(function(){
+            $("#thirdPage").append("<a href='https://www.facebook.com/wu.j.liang.9?fref=ts' class='bottom-btn btn btn-default btn-lg animated fadeInDown' target='_blank'>立即報名</a>");
+        }, 1000);
+    }
+
+    function thirdPageAnimate(index) {
+        var data = ["新好男人 - 吳俊良", "誠徵女友", "只要妳是熱愛棒/壘球的好女孩", "對於考古有興趣","一手掌握，希望無窮"];
+        setTimeout(function(){
+            $("#thirdPage").append("<div class='animated fadeInUp'>" + data[index] +"</div>");
+            index++;
+            if (index < data.length)
+                thirdPageAnimate(index);
+            else
+                showButton();
+        }, 1000);
+    }
+</script>
+</html>

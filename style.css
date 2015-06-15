@@ -1,0 +1,68 @@
+@font-face {
+  font-family: KongXi;
+  src: url(KongXi.otf);
+}
+
+@font-face {
+  font-family: HelveticaNeue;
+  src: url(HelveticaNeue-UltraLight.otf);
+}
+
+html,body {
+    height: 100%;
+}
+
+#firstPage {
+    color: #c0392b;
+
+    height: 100%;
+    background: url(images/firstBackground.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    font-size: 36px;
+    font-family: KongXi;
+    padding-top: 10%;
+    padding-left: 10%;
+}
+
+#secondPage {
+    font-size: 24px;
+    height: 20%;
+    color: white;
+    background-color: #34495e;
+
+    padding: 20px 20px 20px 20px;
+    font-family: HelveticaNeue, Helvetica, Arial, "微軟正黑體", "微软雅黑", "メイリオ", "맑은 고딕", sans-serif;
+}
+
+#thirdPage {
+    background-color: white;
+    color: #384945;
+    position: relative;
+    padding-top: 7%;
+    padding-left: 10%;
+    height: 80%;
+    font-size: 36px;
+    font-family: "Helvetica Neue", Helvetica, Arial, "微軟正黑體", "微软雅黑", "メイリオ", "맑은 고딕", sans-serif;
+}
+
+.btn {
+    font-size: 36px;
+    color: #FC6C61;
+}
+
+.btn:hover {
+    color: #e74c3c;
+    background-color: white;
+}
+
+.bottom-btn {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    margin-left: -89px;
+
+}
